@@ -20,10 +20,13 @@
                     <h5 class="nav-iten">
                         <a href="/movie" class="nav-link">Filmes</a>
                     </h5>
-                    <h5 class="nav-iten">
-                        <a href="/cat/1" class="nav-link">Categorias</a>
-                    </h5>
-            </div>
+            </div>  
+            <div id="search-container" class="col-md-12" style="width: 500px;">
+                <form action="{{ route('movie.index') }}" method="GET">
+                    <input type="text" id="search" name="search" class="form-control" placeholder="Busque um Filme...">
+                </form>
+            </div>    
+            
         </nav>
     </header>
     @yield('content')

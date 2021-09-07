@@ -16,8 +16,3 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('movie', MovieController::class);
-
-
-Route::get('/cat/{id}', function ($id = null) {
-    return view('category', ['id' => $id]);
-});

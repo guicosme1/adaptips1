@@ -16,13 +16,24 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $movies = Movie::all();
-        return view('movies', compact('movies'));
+        $search = request('search');
 
-        foreach ($movies as $movie) {
-            echo($movie);
+        if($search) {
+
+            $movies = Movie::where('title', 'like', '%'.$search.'%')->orWhere('genre', 'like', '%'.$search.'%')
+            ->orWhere('release', 'like', '%'.$search.'%')->orWhere('country_id', 'like', '%'.$search.'%')
+            ->orWhere('synopsis', 'like', '%'.$search.'%')->get();
+            return view('movies', compact('movies'));
+
+        } else {
+
+            $movies = Movie::all();
+            return view('movies', compact('movies'));
+
         }
-    }
+
+        //return view('movies', compact('movies'));
+    }    
 
     /**
      * Show the form for creating a new resource.
@@ -107,6 +118,8 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Movie::findOrFail($id)->delete();
+
+        return redirect(route('movie.index'));
     }
 }
