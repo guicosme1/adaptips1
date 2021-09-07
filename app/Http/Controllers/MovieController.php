@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Models\Movie;
+use App\Models\Country;
 use Carbon\Factory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
 {
@@ -29,7 +31,8 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        $countries = Country::all();
+        return view('create',compact('countries'));
     }
 
     /**
@@ -40,7 +43,14 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $data = $request->all();
+
+        $data['image'] = $request->file('image')->store('movies','public');
+
+        Movie::Create($data);
+
+        return redirect(route('movie.index'));
     }
 
     /**
@@ -51,7 +61,7 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        //
+        echo('aaaa');
     }
 
     /**
@@ -62,7 +72,8 @@ class MovieController extends Controller
      */
     public function edit($id)
     {
-        //
+        $movie = Movie::find($id);
+        return view('edit', compact('movie'));
     }
 
     /**
@@ -74,7 +85,18 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $movie = Movie::find($id);
+
+        $data = $request->all();
+
+        if($request->hasFile('image')){
+            Storage::delete('public/' . $movie->image);
+            $data['image'] = $request->file('image')->store('movies','public');
+        }
+
+        $movie->update($data);
+
+        return redirect(route('movie.index'));
     }
 
     /**
