@@ -23,13 +23,13 @@ class MovieFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->name(),
-            'genre' => $this->faker->name(),
-            'country_id' => $this->faker->unique()->numberBetween(1,10),
-            'release' => $this->faker->dateTimeThisYear(),
-            'synopsis' => $this->faker->text(),
-            'rating' => "9.8",
-            'image' => '',
+            //'title' => $this->faker->name(),
+            //'genre' => $this->faker->name(),
+            //'country_id' => $this->faker->unique()->numberBetween(1,10),
+            //'release' => $this->faker->dateTimeThisYear(),
+            //'synopsis' => $this->faker->text(),
+            //'rating' => "9.8",
+            //'image' => '',
         ];
     }
 

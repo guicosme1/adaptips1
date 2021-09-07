@@ -11,8 +11,7 @@
     <h4>Lançamento</h4><input type="text" name="release" required>
     <h4>Sinopse</h4><input type="text" name="synopsis" required>
     <h4>Nota</h4><input type="text" name="rating" required>
-    <!--<h4>País</h4><input type="number" name="country_id" required>-->
-    <select name="countries_id">
+    <h4></h4><select name="country_id">
         <option value="" disabled selected>-- Escolha um País --</option>
         @foreach ($countries as $country)
             <option value="{{ $country->id }}">{{$country->pais}}</option>
