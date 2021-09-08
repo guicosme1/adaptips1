@@ -13,20 +13,21 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="collapse navbar-collapse" id="navbar">
-                <a href="/" class="navbar-brand">
-                    <img src="/img/play.png" alt="logo1">
-                </a>
                 <ul class="navbar-nav"></ul>
-                    <h5 class="nav-iten">
-                        <a href="/movie" class="nav-link">Filmes</a>
-                    </h5>
+                    <h3 class="nav-iten">
+                        <a href="/movie" class="nav-link">Filmes Adapti</a>
+                    </h3>
+                    <h3 class="nav-iten">
+                        <a href="{{ route('movie.create') }}" class="nav-link">Adicionar Novo Filme</a>
+                    </h3>
             </div>  
-            <div id="search-container" class="col-md-12" style="width: 500px;">
+            <div id="search-container" class="col-md-12" style="width: 500px; 
+            box-shadow: 0px 0px 5px rgb(52, 128, 111); margin-right: 10px;">
                 <form action="{{ route('movie.index') }}" method="GET">
                     <input type="text" id="search" name="search" class="form-control" placeholder="Busque um Filme...">
                 </form>
-            </div>    
-            
+                
+            </div>   
         </nav>
     </header>
     @yield('content')
