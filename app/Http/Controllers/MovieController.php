@@ -23,16 +23,16 @@ class MovieController extends Controller
             $movies = Movie::where('title', 'like', '%'.$search.'%')->orWhere('genre', 'like', '%'.$search.'%')
             ->orWhere('release', 'like', '%'.$search.'%')->orWhere('country_id', 'like', '%'.$search.'%')
             ->orWhere('synopsis', 'like', '%'.$search.'%')->get();
-            return view('movies', compact('movies'));
+            //return view('movies', compact('movies'));
 
         } else {
 
             $movies = Movie::all();
-            return view('movies', compact('movies'));
+            //return view('movies', compact('movies'));
 
         }
 
-        //return view('movies', compact('movies'));
+        return view('movies',['movies' => $movies, 'search' => $search]);
     }    
 
     /**

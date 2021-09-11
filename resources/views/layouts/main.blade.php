@@ -21,9 +21,9 @@
                         <a href="{{ route('movie.create') }}" class="nav-link">Adicionar Novo Filme</a>
                     </h3>
             </div>  
-            <div id="search-container" class="col-md-12" style="width: 500px; 
-            box-shadow: 0px 0px 5px rgb(52, 128, 111); margin-right: 10px;">
+            <div id="search-container" class="col-md-12" style="width: 500px; margin-right: 10px;">
                 <form action="{{ route('movie.index') }}" method="GET">
+                    @csrf
                     <input type="text" id="search" name="search" class="form-control" placeholder="Busque um Filme...">
                 </form>
                 
