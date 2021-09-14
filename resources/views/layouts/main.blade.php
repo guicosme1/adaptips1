@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">-->
     <title>@yield('title')</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/scripts.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
+<body> 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light"> 
-            <div class="collapse navbar-collapse" id="navbar">
-                <a href="/movie" class="nav-link">Filmes Adapti</a>
-                <a href="{{ route('movie.create') }}" class="nav-link">Adicionar Novo Filme</a>
-            </div>
+            <ul class="collapse navbar-collapse" id="navbar">
+                <li><a href="/movie" class="nav-link">Filmes Adapti</a></li>
+                <li><a href="{{ route('movie.create') }}" class="nav-link">Adicionar Novo Filme</a></li>
+            </ul>
         </nav>
     </header>
-    @yield('content')
+    <main>
+        @yield('content')
+    </main>
     <footer>
         <p class="c-footer__text">Desenvolvido por <strong>Guilherme Cosme</strong></p>
     </footer>

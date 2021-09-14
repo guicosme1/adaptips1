@@ -84,7 +84,8 @@ class MovieController extends Controller
     public function edit($id)
     {
         $movie = Movie::find($id);
-        return view('edit', compact('movie'));
+        $countries = Country::all();
+        return view('edit', compact('movie', 'countries'));
     }
 
     /**
