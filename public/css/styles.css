@@ -20,6 +20,7 @@ ul {
 }
 
 header {
+    position: fixed;
     width: 100%;
     background-image: var(--cor-navbar);
     color: black;

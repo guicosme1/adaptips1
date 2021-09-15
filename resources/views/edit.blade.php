@@ -23,12 +23,11 @@
             <h4>Imagem</h4><input type="file" name="image" required value="{{$movie->image}}"> 
             <img src="/storage/{{ $movie->image }}" style="width:100px;height:100px;" alt="poster do filme {{$movie->title}}">
             <h4></h4><button type="submit" style="margin: 10px">Enviar</button>
-            <form action="{{ route('movie.destroy',$movie->id) }}" method="POST" enctype="multipart/form-data"
-                style="margin: 10px; display: inline-block;">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="delete">Deletar</button>
-            </form>
+        </form>
+        <form action="{{ route('movie.destroy',$movie->id) }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="delete">Deletar</button>
         </form>
     </div>
 </div>
