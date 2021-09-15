@@ -6,6 +6,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root {
+    --cor-background: linear-gradient(135deg, rgb(213, 255, 248), rgb(233, 255, 250));
+    --cor-navbar: linear-gradient(90deg, rgb(112, 222, 255) 20%, rgb(106, 255, 223));
+    --cor-destaque: rgb(22, 22, 22);
+    --cor-sombra: rgb(52, 128, 111);
+    --cor-botoes: rgb(47, 109, 167);
+}
+
 ul { 
     display: flex;  flex-direction: row;
     list-style-type: none;
@@ -13,9 +21,9 @@ ul {
 
 header {
     width: 100%;
-    background-image: linear-gradient(90deg, rgb(112, 222, 255) 20%, rgb(106, 255, 223));
+    background-image: var(--cor-navbar);
     color: black;
-    box-shadow: 0px 0px 5px rgb(52, 128, 111);
+    box-shadow: 0px 0px 5px var(--cor-sombra);
 }
 
 .row {
@@ -26,8 +34,8 @@ body {
     min-height: 100vh;
     padding-bottom: 100px;
     position: relative;
-    background-image: linear-gradient(135deg, rgb(213, 255, 248), rgb(233, 255, 250));
-    color: rgb(34, 34, 34);
+    background-image: var(--cor-background);
+    color: var(--cor-destaque);
 }
 
 h4 {
@@ -49,7 +57,7 @@ h4 {
 }
 
 #navbar a:hover {
-    color: rgb(46, 46, 46);
+    color: var(--cor-destaque);
 }
 
 div.buscar {
@@ -58,14 +66,14 @@ div.buscar {
 }
 
 input#search.form-control {
-    box-shadow: 0px 0px 5px rgb(52, 128, 111);
+    box-shadow: 0px 0px 5px var(--cor-sombra);
     width: 300px; 
     height: 30px;
     margin: 0px;
 }
 
 #navbar form-control:hover {
-    box-shadow: 0px 0px 5px rgb(52, 128, 111);
+    box-shadow: 0px 0px 5px var(--cor-sombra);
 }
 
 
@@ -87,21 +95,21 @@ div.card1 {
     border-radius: 10px;
     margin: 5px;
     background-color: rgba(255, 255, 255, 0.363);
-    box-shadow: 0px 0px 1px rgb(52, 128, 111);
+    box-shadow: 0px 0px 1px var(--cor-sombra);
     transition: .2s all ease-in-out;
 }
 
 div.card1:hover {
     background-color: rgba(255, 255, 255, 0.801);
-    box-shadow: 0px 0px 10px rgb(52, 128, 111);
+    box-shadow: 0px 0px 10px var(--cor-sombra);
 }
 
 button {
     color: white;
-    box-shadow: 0px 0px 5px rgb(52, 128, 111);
+    box-shadow: 0px 0px 5px var(--cor-sombra);
     width: 70px;
     height: 30px;
-    background-color: rgb(47, 109, 167);
+    background-color: var(--cor-botoes);
     border-radius: 3px;
     border: 0px;
     transition: .2s all ease-in-out;
@@ -132,7 +140,7 @@ select.select {
 
 button.delete {
     color: white;
-    box-shadow: 0px 0px 5px rgb(52, 128, 111);
+    box-shadow: 0px 0px 5px var(--cor-sombra);
     width: 70px;
     height: 30px;
     background-color: rgb(153, 0, 0);
@@ -151,7 +159,7 @@ h5.card-title {
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.336);
+    text-shadow: 0px 0px 5px var(--cor-sombra);
 }
 
 .card-body p {
