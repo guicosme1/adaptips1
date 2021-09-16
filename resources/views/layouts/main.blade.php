@@ -19,7 +19,7 @@
         </nav>
     </header>
     <main>
-        <div style="height: 60px"></div>
+        <div class="espace"></div>
         @yield('content')
     </main>
     <footer>
