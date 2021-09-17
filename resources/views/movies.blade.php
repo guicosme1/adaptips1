@@ -8,7 +8,7 @@
     <form action="{{ route('movie.index') }}" method="GET">
         @csrf
         <input type="text" id="search" name="search" class="form-control" placeholder="Busque um Filme...">
-        <button class="search-button">Buscar</button>
+        <button class="search-button"><i class="fas fa-search"></i></button>
     </form>
 </div>
 
@@ -29,7 +29,7 @@
                 <p><strong>Nota: </strong>{{ $movie->rating }}</p>
                 <p><strong>Sinopse: </strong>{{ substr($movie->synopsis, 0, 180) }}...</p>
                 <div class="buttons">
-                    <a href="{{ route('movie.edit', $movie->id) }}"><button type="submit">  Editar  </button></a>
+                    <a href="{{ route('movie.edit', $movie->id) }}"><button type="submit">Editar</button></a>
                     <form action="{{ route('movie.destroy',$movie->id) }}" method="POST" enctype="multipart/form-data"
                     style="margin: 10px; display: inline-block;">
                         @csrf

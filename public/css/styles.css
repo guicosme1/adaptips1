@@ -8,7 +8,7 @@
 
 :root {
     --cor-background: linear-gradient(135deg, rgb(213, 255, 248), rgb(233, 255, 250));
-    --cor-navbar: linear-gradient(90deg, rgb(112, 222, 255) 20%, rgb(106, 255, 223));
+    --cor-navbar: linear-gradient(90deg, rgba(112, 222, 255, 0.911) 20%, rgba(106, 255, 223, 0.877));
     --cor-destaque: rgb(22, 22, 22);
     --cor-sombra: rgb(52, 128, 111);
     --cor-botoes: rgb(47, 109, 167);
@@ -17,6 +17,7 @@
 ul { 
     display: flex;  flex-direction: row;
     list-style-type: none;
+    
 }
 
 header {
@@ -24,6 +25,7 @@ header {
     z-index: 1000;
     width: 100%;
     background-image: var(--cor-navbar);
+    backdrop-filter: blur(5px);
     color: black;
     box-shadow: 0px 0px 5px var(--cor-sombra);
 }
@@ -45,17 +47,52 @@ h4 {
 }
 
 #navbar {
+    justify-content: space-between;
     padding-top: 8px;
     padding-bottom: 8px;
 
 }
 
-#navbar a {
+.nav-link {
     margin: 25px;
     font-size: 30px;
     color: white;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
     transition: .2s all ease-in-out;
+}
+
+.nav-add {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    transition: .2s all ease-in-out;
+}
+
+.button-add {
+    padding-top: 5px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.39);
+    width: 230px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.781);
+    border-radius: 3px;
+    border: 0px;
+    margin-right: 25px;
+    transition: .2s all ease-in-out;
+    transform: scale(1);
+}
+
+.button-add:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.39);
+    transform: scale(1.05);
+    transition: .2s all ease-in-out;
+}
+
+.search-button {
+    height: 30px;
+    width: 30px;
+    transform: scale(1);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.39);
 }
 
 #navbar a:hover {
@@ -74,11 +111,16 @@ div.buscar {
 }
 
 input#search.form-control {
-    box-shadow: 0px 0px 5px var(--cor-sombra);
     width: 300px; 
     height: 30px;
+    transform: scale(1);
     margin: 0px;
+    border-radius: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(57, 131, 201);
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.808);
     transition: .2s all ease-in-out;
 }
 
@@ -101,6 +143,7 @@ input#search.form-control {
 }
 
 div.card1 {
+    transform: scale(1);
     position: relative;
     display: inline-block;
     width: 240px;
@@ -114,6 +157,7 @@ div.card1 {
 }
 
 div.card1:hover {
+    transform: scale(1.05);
     background-color: rgba(255, 255, 255, 0.801);
     box-shadow: 0px 0px 10px var(--cor-sombra);
 }
@@ -241,15 +285,23 @@ h5.card-title {
 }
 
 footer {
+    padding: 5px;
     margin-top: 30px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
     background-color: rgb(185, 255, 243);
     position: absolute;
     bottom: 0px;
     width: 100%;
 }
 
+.fab {
+    padding: 10px;
+    font-size: 25px;
+}
+
 footer p {
+    padding-left: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -258,12 +310,31 @@ footer p {
     .card3 {
         left: 25%;
     }
-    #navbar a {
+    .nav-link {
         margin: 25px;
-        font-size: 20px;
-        color: white;
-        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
+        font-size: 25px;
         transition: .2s all ease-in-out;
+    }
+    
+    .nav-add {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        transition: .2s all ease-in-out;
+    }
+    
+    .button-add {
+        width: 230px;
+        height: 35px;
+        background-color: rgba(255, 255, 255, 0.781);
+        margin-right: 25px;
+        transition: .2s all ease-in-out;
+        transform: scale(.9);
+    }
+    .search-button {
+        height: 30px;
+        width: 30px;
+        transform: scale(0.9);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.39);
     }
     div.card1 {
         width: 216px;
@@ -337,6 +408,35 @@ footer p {
     }
 }
 @media (max-width: 475px) {
+    #navbar {
+        padding: 0px;
+    }
+    .button-start {
+        padding-top: 8px;
+    }
+    .nav-link {
+        top: 50px;
+        font-size: 18px;
+        transition: .2s all ease-in-out;
+    }
+    .nav-add {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        transition: .2s all ease-in-out;
+    }
+    .button-add {
+        width: 230px;
+        height: 35px;
+        background-color: rgba(255, 255, 255, 0.781);
+        margin-right: 25px;
+        transition: .2s all ease-in-out;
+        transform: scale(.8);
+    }
+    .button-add:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.39);
+        transform: scale(.9);
+        transition: .2s all ease-in-out;
+    }
     div.card1 {
         width: 166px;
         height: 276px;
@@ -372,8 +472,32 @@ footer p {
     }
 }
 @media (max-width: 415px) {
-    #navbar a {
-        font-size: 17px;
+    .button-start {
+        padding-top: 8px;
+    }
+    .nav-link {
+        margin: 0px;
+        margin-left: 10px;
+        top: 50px;
+        font-size: 15px;
+        transition: .2s all ease-in-out;
+    }
+    .nav-add {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        transition: .2s all ease-in-out;
+    }
+    .button-add {
+        width: 230px;
+        height: 35px;
+        background-color: rgba(255, 255, 255, 0.781);
+        margin-right: 0px;
+        transition: .2s all ease-in-out;
+        transform: scale(.6);
+    }
+    .button-add:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.39);
+        transform: scale(.7);
         transition: .2s all ease-in-out;
     }
     div.card1 {
