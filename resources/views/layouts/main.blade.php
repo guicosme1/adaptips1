@@ -14,8 +14,8 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light"> 
             <ul class="collapse navbar-collapse" id="navbar">
-                <li class="button-start"><a href="/movie" class="nav-link">Filmes Adapti</a></li>
-                <li class="button-add"><a href="{{ route('movie.create') }}" class="nav-add">Adicionar Novo Filme</a></li>
+                <li class="button-start"><a href="/movie" class="nav-link"><i class="fas fa-video"></i>  Filmes Adapti</a></li>
+                <li class="button-add"><a href="{{ route('movie.create') }}" class="nav-add">Novo Filme     <i class="fas fa-plus"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -26,7 +26,9 @@
     <footer>
         <p class="c-footer__text">Desenvolvido por <strong>Guilherme Cosme</strong></p>
         <div>
+            <a href="https://www.instagram.com/guicosme1/"><i style="color:rgb(39, 39, 39);" class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/guicpd"><i style="color:rgb(39, 39, 39);" class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/guilherme-cosme-1620bb219/"><i style="color:rgb(39, 39, 39);" class="fab fa-linkedin"></i></a>
             <a href="https://github.com/guicosme1"><i style="color:rgb(39, 39, 39);" class="fab fa-github"></i></a>
         </div>
 

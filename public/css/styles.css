@@ -53,6 +53,12 @@ h4 {
 
 }
 
+.fas.fa-video {
+    color: white;
+    transform: scale(1);
+    transition: .2s all ease-in-out;
+}
+
 .nav-link {
     margin: 25px;
     font-size: 30px;
@@ -72,7 +78,7 @@ h4 {
     text-align: center;
     cursor: pointer;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.39);
-    width: 230px;
+    width: 180px;
     height: 35px;
     background-color: rgba(255, 255, 255, 0.781);
     border-radius: 3px;
@@ -95,8 +101,16 @@ h4 {
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.39);
 }
 
+#navbar a {
+    transition: .2s all ease-in-out;
+}
 #navbar a:hover {
     color: var(--cor-destaque);
+}
+
+#navbar a:hover .fas.fa-video {
+    color: var(--cor-destaque);
+    transform: scale(1.2);
 }
 
 .espace {
@@ -195,6 +209,7 @@ div.card1:hover .info{
 .card3 {
     text-align: center;
     gap: 50px;
+    margin-top: 15px;
     width: 100%;
     display: flex;
     position: relative;
@@ -204,12 +219,14 @@ div.card1:hover .info{
 
 .card4 {
     text-align: center;
-    gap: 50px;
+    gap: 180px;
     width: 100%;
+    margin-top: 10px;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
+    transition: .2s all ease-in-out;
 }
 
 label {
@@ -239,6 +256,7 @@ button:hover {
 }
 
 input.input {
+    padding-left: 5px;
     margin: 10px;
     height: 30px;
     width: 200px;
@@ -248,8 +266,10 @@ input.input {
 }
 
 .input-text {
+    padding: 5px;
     height: 100px;
     width: 200px;
+    margin: 10px;
     border-style: solid;
     border-radius: 8px;
     border-color: rgb(58, 135, 207);
@@ -325,9 +345,6 @@ footer p {
 }
 
 @media (max-width: 600px) {
-    .card3 {
-        left: 25%;
-    }
     .card4 {
         text-align: center;
         gap: 50px;
@@ -349,7 +366,7 @@ footer p {
         transition: .2s all ease-in-out;
     }
     .button-add {
-        width: 230px;
+        width: 100%px;
         height: 35px;
         background-color: rgba(255, 255, 255, 0.781);
         margin-right: 25px;
@@ -369,7 +386,7 @@ footer p {
         transition: .2s all ease-in-out;
     }
     .espace {
-        height: 40px;
+        height: 60px;
         transition: .2s all ease-in-out;
     }
     input#search.form-control {
@@ -406,9 +423,6 @@ footer p {
 }
 
 @media (max-width: 530px) {
-    .card3 {
-        left: 5%;
-    }
     div.card1 {
         width: 195px;
         height: 324px;

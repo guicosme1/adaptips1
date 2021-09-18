@@ -20,7 +20,7 @@
                 <h4></h4><input type="text" name="rating" required value="{{$movie->rating}}" class="input">
                 <h4></h4><label for="title">País</label>
                 <h4></h4><select style="border-width: 2px;" name="country_id" class="select">
-                    <option value="" disabled selected>-- Escolha um País --</option>
+                    <option value="" disabled selected>{{ $movie->country->pais }}</option>
                     @foreach ($countries as $country)
                         <option value="{{ $country->id }}">{{$country->pais}}</option>
                     @endforeach
@@ -28,7 +28,7 @@
             </div>
             <div>
                 <h4></h4><label for="title">Sinopse</label>
-                <h4></h4><textarea class="input-text" type="text" name="synopsis" required value="{{$movie->synopsis}}"></textarea>
+                <h4></h4><textarea class="input-text" type="text" name="synopsis" required value="{{$movie->synopsis}}">{{$movie->synopsis}}</textarea>
                 <h4></h4><label for="title">Imagem</label>
                 <h4></h4><input type="file" name="image" required value="{{$movie->image}}"> 
                 <h4></h4><img src="/storage/{{ $movie->image }}" style="width:90px;height:120px; 

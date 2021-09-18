@@ -29,12 +29,12 @@
                 <p><strong>Nota: </strong>{{ $movie->rating }}</p>
                 <p><strong>Sinopse: </strong>{{ substr($movie->synopsis, 0, 180) }}...</p>
                 <div class="buttons">
-                    <a href="{{ route('movie.edit', $movie->id) }}"><button type="submit">Editar</button></a>
+                    <a href="{{ route('movie.edit', $movie->id) }}"><button type="submit"><i class="far fa-edit"></i></button></a>
                     <form action="{{ route('movie.destroy',$movie->id) }}" method="POST" enctype="multipart/form-data"
                     style="margin: 10px; display: inline-block;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="delete">Deletar</button>
+                        <button type="submit" class="delete"><i class="fas fa-trash"></i></button>
                     </form>
                 </div>
             </div>
