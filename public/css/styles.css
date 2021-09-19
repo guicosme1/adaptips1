@@ -60,10 +60,11 @@ h4 {
 }
 
 .nav-link {
+    font-weight: bold;
     margin: 25px;
     font-size: 30px;
     color: white;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.459);
     transition: .2s all ease-in-out;
 }
 
@@ -81,7 +82,7 @@ h4 {
     width: 180px;
     height: 35px;
     background-color: rgba(255, 255, 255, 0.781);
-    border-radius: 3px;
+    border-radius: 40px;
     border: 0px;
     margin-right: 25px;
     transition: .2s all ease-in-out;
@@ -92,6 +93,7 @@ h4 {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.39);
     transform: scale(1.05);
     transition: .2s all ease-in-out;
+    background-color: rgba(255, 255, 255, 0.925);
 }
 
 .search-button {
@@ -99,6 +101,7 @@ h4 {
     width: 30px;
     transform: scale(1);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.39);
+    border-radius: 13px;
 }
 
 #navbar a {
@@ -119,9 +122,22 @@ h4 {
 }
 
 div.buscar {
+    display: flex;
     padding: 10px;
-    margin: 10px;
     margin-left: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.category-link {
+    padding: 5px;
+    color: var(--cor-destaque);
 }
 
 input#search.form-control {
@@ -129,7 +145,7 @@ input#search.form-control {
     height: 30px;
     transform: scale(1);
     margin: 0px;
-    border-radius: 5px;
+    border-radius: 13px;
     border: 2px;
     border-style: solid;
     border-color: rgb(57, 131, 201);
@@ -144,11 +160,14 @@ input#search.form-control {
 
 
 #cards-container {
+    gap: 15px;
     text-align: center;
     display: flex;
     padding: 20px;
     padding-top: 0px;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #card {
@@ -162,10 +181,10 @@ div.card1 {
     display: inline-block;
     width: 240px;
     height: 400px;
-    border-radius: 3px;
+    border-radius: 13px;
     margin: 5px;
-    background-color: rgba(255, 255, 255, 0.363);
-    box-shadow: 0px 0px 1px var(--cor-sombra);
+    background-color: rgba(255, 255, 255, 0.842);
+    box-shadow: 0px 0px 2px var(--cor-sombra);
     transition: .2s all ease-in-out;
 }
 
@@ -180,14 +199,15 @@ div.card1:hover {
     height: 89%;
     width: 100%;
     left: 0%;
-    border-radius: 3px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
 }
 
 div.card1 .info{
     top: 0%;
     height: 100%;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 13px;
     opacity: 0%;
     padding-top: 5%;
     padding-left: 5%;
@@ -240,18 +260,20 @@ label {
 }
 
 button {
+    opacity: 80%;
     cursor: pointer;
     color: white;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.39);
     width: 70px;
     height: 30px;
     background-color: var(--cor-botoes);
-    border-radius: 3px;
+    border-radius: 13px;
     border: 0px;
     transition: .2s all ease-in-out;
 }
 
 button:hover {
+    opacity: 100%;
     background-color: rgb(57, 131, 201);
 }
 
@@ -292,7 +314,7 @@ button.delete {
     width: 70px;
     height: 30px;
     background-color: rgb(153, 0, 0);
-    border-radius: 3px;
+    border-radius: 13px;
     border: 0px;
     transition: .2s all ease-in-out;
 }
@@ -366,7 +388,7 @@ footer p {
         transition: .2s all ease-in-out;
     }
     .button-add {
-        width: 100%px;
+        width: 30%;
         height: 35px;
         background-color: rgba(255, 255, 255, 0.781);
         margin-right: 25px;
@@ -399,7 +421,6 @@ footer p {
         height: 88%;
         width: 100%;
         left: 0%;
-        border-radius: 3px;
     } 
     .card-body .p-title {
         font-size: 16px;
@@ -451,6 +472,10 @@ footer p {
     #navbar {
         padding: 0px;
     }
+    .espace {
+        height: 40px;
+        transition: .2s all ease-in-out;
+    }
     .button-start {
         padding-top: 8px;
     }
@@ -465,7 +490,7 @@ footer p {
         transition: .2s all ease-in-out;
     }
     .button-add {
-        width: 230px;
+        width: 40%;
         height: 35px;
         background-color: rgba(255, 255, 255, 0.781);
         margin-right: 25px;
@@ -512,6 +537,9 @@ footer p {
     }
 }
 @media (max-width: 415px) {
+    #cards-container {
+        flex-direction: column;
+    }
     .button-start {
         padding-top: 8px;
     }
@@ -519,7 +547,7 @@ footer p {
         margin: 0px;
         margin-left: 10px;
         top: 50px;
-        font-size: 15px;
+        font-size: 17px;
         transition: .2s all ease-in-out;
     }
     .nav-add {
@@ -528,7 +556,7 @@ footer p {
         transition: .2s all ease-in-out;
     }
     .button-add {
-        width: 230px;
+        width: 50%;
         height: 35px;
         background-color: rgba(255, 255, 255, 0.781);
         margin-right: 0px;

@@ -10,10 +10,20 @@
         <input type="text" id="search" name="search" class="form-control" placeholder="Busque um Filme...">
         <button class="search-button"><i class="fas fa-search"></i></button>
     </form>
+    <div class="category">
+        <a class="category-link" href="/movie?_token=JhaZtR0bNiyXkqz9U7vSOhgGn58FmHnQDsnYCT2b&search=ação">Ação</a>
+        <a class="category-link" href="/movie?_token=JhaZtR0bNiyXkqz9U7vSOhgGn58FmHnQDsnYCT2b&search=Aventura">Aventura</a>
+        <a class="category-link" href="/movie?_token=JhaZtR0bNiyXkqz9U7vSOhgGn58FmHnQDsnYCT2b&search=comedia">Comédia</a>
+        <a class="category-link" href="/movie?_token=JhaZtR0bNiyXkqz9U7vSOhgGn58FmHnQDsnYCT2b&search=herois">Heróis</a>
+    </div>
+
 </div>
 
 @if ($search)
+<div style="text-align: center; padding-bottom: 10px">
     <h3 style="margin-left: 20px; margin-top: 10px">Buscando por {{ $search }}:</h3>
+</div>
+    
 @endif
 <div id="cards-container" class="row">
     @foreach ($movies as $movie)

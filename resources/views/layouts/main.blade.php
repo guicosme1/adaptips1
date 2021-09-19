@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light"> 
             <ul class="collapse navbar-collapse" id="navbar">
-                <li class="button-start"><a href="/movie" class="nav-link"><i class="fas fa-video"></i>  Filmes Adapti</a></li>
+                <li class="button-start"><a href="/movie" class="nav-link">Filmes Adapti</a></li>
                 <li class="button-add"><a href="{{ route('movie.create') }}" class="nav-add">Novo Filme     <i class="fas fa-plus"></i></a></li>
             </ul>
         </nav>
