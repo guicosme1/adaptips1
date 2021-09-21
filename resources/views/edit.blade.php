@@ -30,10 +30,10 @@
                 <h4></h4><label for="title">Sinopse</label>
                 <h4></h4><textarea class="input-text" type="text" name="synopsis" required value="{{$movie->synopsis}}">{{$movie->synopsis}}</textarea>
                 <h4></h4><label for="title">Imagem</label>
-                <h4></h4><input type="file" name="image" required value="{{$movie->image}}"> 
                 <h4></h4><img src="/storage/{{ $movie->image }}" style="width:90px;height:120px; 
-                margin-top: 10px; box-shadow: 0px 0px 7px black;" alt="poster do filme {{$movie->title}}">
-                <h4></h4><button type="submit" style="margin: 10px">Enviar</button>
+                margin-top: 10px; box-shadow: 0px 0px 7px black;" alt="poster do filme {{$movie->title}}">                
+                <h4></h4><input type="file" name="image" required value="{{$movie->image}}"> 
+                <h4></h4><button type="submit" style="margin: 10px">Salvar</button>
             </div>
         </form>
     </div>
